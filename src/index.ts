@@ -70,7 +70,7 @@ async function runStdio(): Promise<void> {
   console.error("GBP MCP server running on stdio");
 }
 
-const transport = process.env.TRANSPORT ?? "stdio";
+const transport = process.env.TRANSPORT ?? "http";
 if (transport === "http") {
   runHTTP().catch((error: unknown) => {
     console.error("Server error:", error);
